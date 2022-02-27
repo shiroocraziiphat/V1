@@ -6,7 +6,7 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
+┌─〔 Shiro-Botz 〕
 ├ Hai, %name!
 │
 ├ Tersisa *%limit Limit*
@@ -21,15 +21,14 @@ const defaultMenu = {
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
 ├ Github:
-├ %github
+├ https://github.com/Hyzerr
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+*%Shiro-Botz@^%version*
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -189,8 +188,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© stikerin",
-          "buttonText": "Klik Disini",
+          "description": "©shirobotz",
+          "buttonText": "KLIK DISINI",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
